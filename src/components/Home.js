@@ -9,56 +9,41 @@ function Home() {
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
               <li data-target="#carouselExampleIndicators" data-slide-to={1} />
-              <li data-target="#carouselExampleIndicators" data-slide-to={2} />
             </ol>
             <div className="carousel-inner" role="listbox">
               {/* Slide One - Set the background image for this slide in the line below */}
               <div className="carousel-item active" style={{backgroundImage: 'url("images/banner1.jpg")'}}>
                 <div className="carousel-caption d-none d-md-block">
-                  <h2 className="display-4">First Slide</h2>
-                  <p className="lead">This is a description for the first slide.</p>
+                  <h2 className="display-4">Blue Owl Wines</h2>
+                  <p className="lead">Order Now.</p>
                 </div>
               </div>
               {/* Slide Two - Set the background image for this slide in the line below */}
               <div className="carousel-item" style={{backgroundImage: 'url("images/banner2.jpg")'}}>
                 <div className="carousel-caption d-none d-md-block">
-                  <h2 className="display-4">Second Slide</h2>
-                  <p className="lead">This is a description for the second slide.</p>
+                  <h2 className="display-4">Butcher Box</h2>
+                  <p className="lead">Order Now.</p>
                 </div>
               </div>
-              {/* Slide Three - Set the background image for this slide in the line below */}
-              <div className="carousel-item" style={{backgroundImage: 'url("images/banner1.jpg")'}}>
-                <div className="carousel-caption d-none d-md-block">
-                  <h2 className="display-4">Third Slide</h2>
-                  <p className="lead">This is a description for the third slide.</p>
-                </div>
-              </div>
+              
             </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true" />
-              <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true" />
-              <span className="sr-only">Next</span>
-            </a>
           </div>
         </section>
         <div className="container-fluid">
           <div className="row">
             <div className="col odd">
-              <img src="images/quality.png" width="20%" />
-              <h6>TRUSTED QUALITY</h6>
+              <img src="images/quality.png" width="25%" />
+              <h6 style={{marginTop: '10px', fontWeight: 'bold', fontSize: '0.8em'}}>TRUSTED QUALITY</h6>
               <p>100% premium quality Zimbabwean beef</p>
             </div>
             <div className="col even">
-              <img src="images/convinience.png" width="20%" />
-              <h6>CONVENIENCE</h6>
+              <img src="images/convinience.png" width="25%" />
+              <h6 style={{marginTop: '10px', fontWeight: 'bold', fontSize: '0.8em'}}>CONVENIENCE</h6>
               <p>FREE delivery in Harare</p>
             </div>
             <div className="col odd">
-              <img src="images/choice.png" width="20%" />
-              <h6>CHOICE</h6>
+              <img src="images/choice.png" width="25%" />
+              <h6 style={{marginTop: '10px', fontWeight: 'bold', fontSize: '0.8em'}}>CHOICE</h6>
               <p>More than ten well thought out boxes to choose from</p>
             </div>
           </div>
@@ -68,7 +53,7 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-4 my-auto" style={{textAlign: 'center'}}>
-                <h5>OUR MEAT</h5>
+                <h5 style={{fontWeight: 'bold'}}>OUR MEAT</h5>
                 <p>Better quality, better price, better service</p>
                 <button type="button" className="btn btn-outline-dark">More</button>
               </div>
@@ -78,7 +63,7 @@ function Home() {
         </section>
         <section>
           <div className="container companies">
-            <h3>Companies</h3>
+            <h3 style={{fontWeight: 'bold'}}>Companies</h3>
             <div className="row"> 
               <div className="col-3">
                 <img className="img-responsive center-block" src="images/logo-texas-meats@2x.png" width="100%/" />
@@ -109,7 +94,7 @@ function Home() {
         </section>
         <section>
           <div className="container-fluid recipes">
-            <h3>Recipes</h3>
+            <h3 style={{fontWeight: 'bold'}}>Recipes</h3>
             <div className="row">
               <hr />
               <div className="gal">
@@ -135,7 +120,7 @@ function Home() {
                 <h3>Subscribe for Updates</h3>
                 <p>Get the latest updates, recipes, and more straight to your inbox or your Facebook feed.</p>
                 <form className="form-inline">
-                  <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" style={{width: '90% !important'}} />
+                  <input type="email" className="form-control form-length" id="email" placeholder="Enter email" name="email" />
                   <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
               </div>
@@ -146,8 +131,9 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col">
-                <p>Order online or call<br />(04) 772 685<br />to place an order.</p>
-                <button type="button" className="btn btn-outline-light">Light</button>
+                <p>Order online or call<br /><span style={{fontSize: '2.3em', fontWeight: 'bold'}}>(04) 772 685</span><br />to place an order.</p>
+                <button type="button" className="btn btn-outline-light"><i className="fa fa-phone" aria-hidden="true" />
+                  CALL NOW</button>
               </div>
             </div>
           </div>

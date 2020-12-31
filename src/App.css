@@ -8,14 +8,15 @@ body {
 
 .logo {
   position: absolute;
-  margin-top: -55px;
+  margin-top: -65px;
   z-index:2;
   
   }
 
   .top-nav {
-    height: 120px;
+    height: 150px;
     margin-top: -88px;
+    border-bottom: 4px solid black;
   }
 
   .menu-list {
@@ -31,12 +32,14 @@ body {
   }
 
   .odd {
-    background: #2c2c2c
+    background: #2c2c2c;
+    padding: 60px 30px;
 
   }
 
   .even {
-    background: #000000
+    background: #000000;
+    padding: 60px 30px;
 
   }
   #promo1 {
@@ -55,29 +58,35 @@ body {
   #footer {
     background: #303030;
     color:white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 0.8em;
   }
 
   .footer1 a {
     padding: 10px;
     color: white;
+    font-size: 0.8em;
   }
 
   #footer-links {
     background : #111111;
     text-align: center;
+    padding: 40px 15px;
   }
 
   #call {
     background: #000000;
     text-align: center;
     color: white;
+    padding: 60px 0;
   }
 
   #newsletter {
     background: #303030 url(background-images/signup-bg.png) no-repeat left center;
     background-size: auto;
     background-size: 400px 420px;
-    padding: 60px 0 60px 0;
+    padding: 60px 0 100px 0;
     text-align: center;
     color: white;
   }
@@ -130,6 +139,11 @@ body {
 
 .companies {
   text-align: center;
+  padding: 60px 0 40px 0;
+}
+
+.recipes {
+  padding-top: 30px;
 }
 
 .recipes h3 {
@@ -165,4 +179,28 @@ body {
 	
 	}
 		
-	}
+  }
+  
+.fa-stack {
+    margin-top: -12px;
+  }
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #0f0f0f;
+  }
+
+.navbar-dark .navbar-nav .active > .nav-link {
+color: black;
+  }
+
+.bg-white {
+    background-color: #fff;
+}
+
+.icon-background {
+  color: #d9d9d9;
+}
+
+.form-length {
+  width: 90% !important;
+}
