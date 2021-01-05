@@ -1,23 +1,32 @@
 import React from 'react'
-import logo from '../logo.png';
+import logo from '../logo.png'
+import Home from '../components/Home'
+import About from '../components/About'
+import Meat from '../components/Meat'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 function Nav() {
     return (
+      <Router>
       <nav className="navbar navbar-expand-md navbar-dark bg-white top-nav">
       <div className="container">
-        <a className="navbar-brand" href="#">
+      <Link to="/" className="navbar-brand">
           <img src={logo} className="logo" width={140} />
-        </a>
+      </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul className="navbar-nav mr-auto menu-list">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">ABOUT US</a>
+            <li className="nav-item">
+            <Link to="/about" className="nav-link">
+             ABOUT US
+            </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">OUR MEAT</a>
+            <Link to="/meat" className="nav-link">
+             OUR MEAT
+            </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">BUTCHER BOX</a>
@@ -46,6 +55,10 @@ function Nav() {
           <button className="btn btn-dark navbar-btn" style={{marginTop: '-10px'}}>ORDER ONLINE</button>
         </div>
       </div></nav>
+      <Route path="/" exact component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/meat" component={Meat} />
+      </Router>
     )
 }
 
