@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/amp-meats/static/css/main.31ff18e4.chunk.css",
-    "main.js": "/amp-meats/static/js/main.fdcdde4f.chunk.js",
-    "main.js.map": "/amp-meats/static/js/main.fdcdde4f.chunk.js.map",
-    "runtime-main.js": "/amp-meats/static/js/runtime-main.6ace33b3.js",
-    "runtime-main.js.map": "/amp-meats/static/js/runtime-main.6ace33b3.js.map",
-    "static/js/2.755dcff8.chunk.js": "/amp-meats/static/js/2.755dcff8.chunk.js",
-    "static/js/2.755dcff8.chunk.js.map": "/amp-meats/static/js/2.755dcff8.chunk.js.map",
-    "static/js/3.d7a9431d.chunk.js": "/amp-meats/static/js/3.d7a9431d.chunk.js",
-    "static/js/3.d7a9431d.chunk.js.map": "/amp-meats/static/js/3.d7a9431d.chunk.js.map",
+    "main.css": "/amp-meats/static/css/main.44a8520b.chunk.css",
+    "main.js": "/amp-meats/static/js/main.ce8f8acd.chunk.js",
+    "main.js.map": "/amp-meats/static/js/main.ce8f8acd.chunk.js.map",
+    "runtime-main.js": "/amp-meats/static/js/runtime-main.81640885.js",
+    "runtime-main.js.map": "/amp-meats/static/js/runtime-main.81640885.js.map",
+    "static/js/2.50ae5e69.chunk.js": "/amp-meats/static/js/2.50ae5e69.chunk.js",
+    "static/js/2.50ae5e69.chunk.js.map": "/amp-meats/static/js/2.50ae5e69.chunk.js.map",
+    "static/js/3.cea0b7ec.chunk.js": "/amp-meats/static/js/3.cea0b7ec.chunk.js",
+    "static/js/3.cea0b7ec.chunk.js.map": "/amp-meats/static/js/3.cea0b7ec.chunk.js.map",
     "index.html": "/amp-meats/index.html",
-    "static/css/main.31ff18e4.chunk.css.map": "/amp-meats/static/css/main.31ff18e4.chunk.css.map",
-    "static/js/2.755dcff8.chunk.js.LICENSE.txt": "/amp-meats/static/js/2.755dcff8.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/amp-meats/static/media/logo.6ce24c58.svg",
-    "static/media/App.css": "/amp-meats/static/media/signup-bg.3b7e66df.png"
+    "static/css/main.44a8520b.chunk.css.map": "/amp-meats/static/css/main.44a8520b.chunk.css.map",
+    "static/js/2.50ae5e69.chunk.js.LICENSE.txt": "/amp-meats/static/js/2.50ae5e69.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/amp-meats/static/media/signup-bg.3b7e66df.png",
+    "static/media/logo.6ce24c58.svg": "/amp-meats/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6ace33b3.js",
-    "static/js/2.755dcff8.chunk.js",
-    "static/css/main.31ff18e4.chunk.css",
-    "static/js/main.fdcdde4f.chunk.js"
+    "static/js/runtime-main.81640885.js",
+    "static/js/2.50ae5e69.chunk.js",
+    "static/css/main.44a8520b.chunk.css",
+    "static/js/main.ce8f8acd.chunk.js"
   ]
 }
