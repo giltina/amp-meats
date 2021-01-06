@@ -10,7 +10,7 @@ function Nav() {
       <Router>
       <nav className="navbar navbar-expand-md navbar-dark bg-white top-nav">
       <div className="container">
-      <Link to="/" className="navbar-brand">
+      <Link to={process.env.PUBLIC_URL + '/'} className="navbar-brand">
           <img src={logo} className="logo" width={140} />
       </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,12 +19,12 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul className="navbar-nav mr-auto menu-list">
             <li className="nav-item">
-            <Link to="/about" className="nav-link">
+            <Link to={process.env.PUBLIC_URL + '/about'} className="nav-link">
              ABOUT US
             </Link>
             </li>
             <li className="nav-item">
-            <Link to="/meat" className="nav-link">
+            <Link to={process.env.PUBLIC_URL + '/meat'} className="nav-link">
              OUR MEAT
             </Link>
             </li>
