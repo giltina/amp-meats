@@ -55,7 +55,7 @@ function Nav() {
           <button className="btn btn-dark navbar-btn" style={{marginTop: '-10px'}}>ORDER ONLINE</button>
         </div>
       </div></nav>
-      <Route path="/" exact component={Home} />
+      <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/meat" component={Meat} />
       </Router>
