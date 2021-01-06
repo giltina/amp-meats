@@ -56,8 +56,8 @@ function Nav() {
         </div>
       </div></nav>
       <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/meat" component={Meat} />
+      <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
+      <Route path={process.env.PUBLIC_URL + '/meat'} component={Meat} />
       </Router>
     )
 }
