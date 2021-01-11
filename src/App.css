@@ -146,7 +146,7 @@ body {
   padding-top: 30px;
 }
 
-.recipes h3 {
+.recipes-header h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.1em;
@@ -340,4 +340,138 @@ color: #000;
   padding: 60px 0 40px 0;
 }
 
+div.recipe-list > div > a.photo {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+div.recipe-list > div {
+  padding: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+div.recipe-list > div > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: solid 2px #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recipe-container {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background: #f0f0f0;
+}
+
+div.recipe-list > div > a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 20px 20px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  transition: all .4s ease;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+div.recipe-list > div > a:hover span {
+  padding-bottom: 30px;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 );
+}
+
+
+
+
+
+div.home-recipe-list > div > a.photo {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+div.home-recipe-list > div {
+  padding: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+div.home-recipe-list > div > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: solid 2px #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.home-recipe-list > div > a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 20px 20px 20px;
+  font-size: 0.9em;
+  color: #fff;
+  transition: all .4s ease;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+div.home-recipe-list > div > a:hover span {
+  padding-bottom: 30px;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 );
+}
+
+.contact-form {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.carousel-caption > div > div {
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 20px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.carousel-caption {
+  top: 20%;
+}
 
