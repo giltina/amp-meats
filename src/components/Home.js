@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel'
 
 export class Home extends Component {
 
-  site_url = "http://ampmeats.zimbabwewebdesign.com"
+  site_url = "https://ampmeats.zimbabwewebdesign.com"
 
   constructor(props) {
     super(props)
@@ -19,9 +19,9 @@ export class Home extends Component {
   componentDidMount() {
 
     axios.all([
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/sliders'),
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/companies'),
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/recipes'),
+      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/sliders'),
+      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/companies'),
+      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/recipes'),
     ])
       .then(response => {
         this.setState({ sliders: response[0].data })
