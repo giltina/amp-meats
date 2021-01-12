@@ -4,7 +4,7 @@ export class Faqs extends Component {
     render() {
         return (
             <div>
-                
+                Faqs
             </div>
         )
     }

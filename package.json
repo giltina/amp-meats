@@ -2,7 +2,6 @@
   "name": "amp-meats",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://giltina.github.io/amp-meats",
   "proxy": "https://ampmeats.zimbabwewebdesign.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",

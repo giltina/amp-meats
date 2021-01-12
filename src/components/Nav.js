@@ -5,6 +5,7 @@ import About from '../components/About'
 import Meat from '../components/Meat'
 import Recipes from '../components/Recipes'
 import Contact from '../components/Contact'
+import Faqs from '../components/Faqs'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 function Nav() {
@@ -44,6 +45,11 @@ function Nav() {
             </Link>
               </li>
               <li className="nav-item">
+                <Link to={process.env.PUBLIC_URL + '/faqs'} className="nav-link">
+                 FAQS
+            </Link>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#"><span className="fa-stack fa-lg">
                   <i className="fa fa-circle fa-stack-2x icon-background" />
                   <i className="fa fa-cart-arrow-down fa-stack-1x" />
@@ -66,6 +72,7 @@ function Nav() {
       <Route path={process.env.PUBLIC_URL + '/meat'} component={Meat} />
       <Route path={process.env.PUBLIC_URL + '/recipes'} component={Recipes} />
       <Route path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
+      <Route path={process.env.PUBLIC_URL + '/faqs'} component={Faqs} />
     </Router>
   )
 }
