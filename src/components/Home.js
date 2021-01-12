@@ -19,9 +19,9 @@ export class Home extends Component {
   componentDidMount() {
 
     axios.all([
-      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/sliders'),
-      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/companies'),
-      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/recipes'),
+      axios.get('/rest/v1/sliders'),
+      axios.get('/rest/v1/companies'),
+      axios.get('/rest/v1/recipes'),
     ])
       .then(response => {
         this.setState({ sliders: response[0].data })
