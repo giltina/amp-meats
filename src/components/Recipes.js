@@ -15,7 +15,7 @@ export class Recipes extends Component {
     componentDidMount() {
 
         axios.all([
-            axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/recipes',{ crossdomain: true }),
+            axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/recipes'),
         ])
             .then(response => {
                 this.setState({ recipes: response[0].data })
