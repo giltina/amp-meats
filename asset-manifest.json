@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/amp-meats/static/css/main.f1b089d3.chunk.css",
-    "main.js": "/amp-meats/static/js/main.ba0de190.chunk.js",
-    "main.js.map": "/amp-meats/static/js/main.ba0de190.chunk.js.map",
+    "main.js": "/amp-meats/static/js/main.98a0fcc5.chunk.js",
+    "main.js.map": "/amp-meats/static/js/main.98a0fcc5.chunk.js.map",
     "runtime-main.js": "/amp-meats/static/js/runtime-main.d35919f1.js",
     "runtime-main.js.map": "/amp-meats/static/js/runtime-main.d35919f1.js.map",
-    "static/js/2.482bd3ad.chunk.js": "/amp-meats/static/js/2.482bd3ad.chunk.js",
-    "static/js/2.482bd3ad.chunk.js.map": "/amp-meats/static/js/2.482bd3ad.chunk.js.map",
+    "static/js/2.737e9df9.chunk.js": "/amp-meats/static/js/2.737e9df9.chunk.js",
+    "static/js/2.737e9df9.chunk.js.map": "/amp-meats/static/js/2.737e9df9.chunk.js.map",
     "static/js/3.88d38267.chunk.js": "/amp-meats/static/js/3.88d38267.chunk.js",
     "static/js/3.88d38267.chunk.js.map": "/amp-meats/static/js/3.88d38267.chunk.js.map",
     "index.html": "/amp-meats/index.html",
     "static/css/main.f1b089d3.chunk.css.map": "/amp-meats/static/css/main.f1b089d3.chunk.css.map",
-    "static/js/2.482bd3ad.chunk.js.LICENSE.txt": "/amp-meats/static/js/2.482bd3ad.chunk.js.LICENSE.txt",
+    "static/js/2.737e9df9.chunk.js.LICENSE.txt": "/amp-meats/static/js/2.737e9df9.chunk.js.LICENSE.txt",
     "static/media/App.css": "/amp-meats/static/media/signup-bg.3b7e66df.png",
     "static/media/logo.6ce24c58.svg": "/amp-meats/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d35919f1.js",
-    "static/js/2.482bd3ad.chunk.js",
+    "static/js/2.737e9df9.chunk.js",
     "static/css/main.f1b089d3.chunk.css",
-    "static/js/main.ba0de190.chunk.js"
+    "static/js/main.98a0fcc5.chunk.js"
   ]
 }
