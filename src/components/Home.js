@@ -19,9 +19,9 @@ export class Home extends Component {
   componentDidMount() {
 
     axios.all([
-      axios.get('/rest/v1/sliders'),
-      axios.get('/rest/v1/companies'),
-      axios.get('/rest/v1/recipes'),
+      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/sliders',{ crossdomain: true }),
+      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/companies',{ crossdomain: true }),
+      axios.get('https://ampmeats.zimbabwewebdesign.com/rest/v1/recipes',{ crossdomain: true }),
     ])
       .then(response => {
         this.setState({ sliders: response[0].data })
