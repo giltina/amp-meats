@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/amp-meats/static/css/main.f1b089d3.chunk.css",
-    "main.js": "/amp-meats/static/js/main.98a0fcc5.chunk.js",
-    "main.js.map": "/amp-meats/static/js/main.98a0fcc5.chunk.js.map",
+    "main.js": "/amp-meats/static/js/main.d66375d8.chunk.js",
+    "main.js.map": "/amp-meats/static/js/main.d66375d8.chunk.js.map",
     "runtime-main.js": "/amp-meats/static/js/runtime-main.d35919f1.js",
     "runtime-main.js.map": "/amp-meats/static/js/runtime-main.d35919f1.js.map",
     "static/js/2.737e9df9.chunk.js": "/amp-meats/static/js/2.737e9df9.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.d35919f1.js",
     "static/js/2.737e9df9.chunk.js",
     "static/css/main.f1b089d3.chunk.css",
-    "static/js/main.98a0fcc5.chunk.js"
+    "static/js/main.d66375d8.chunk.js"
   ]
 }
