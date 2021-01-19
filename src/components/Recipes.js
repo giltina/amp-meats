@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { withRouter } from 'react-router-dom'
 
 export class Recipes extends Component {
     site_url = "http://ampmeats.zimbabwewebdesign.com"
@@ -23,6 +24,11 @@ export class Recipes extends Component {
             .catch(error => console.log(error))
     }
 
+    handleSubmit = (id) => {
+        this.props.history.push(`/recipe/${id}`)
+    }
+
+
 
     render() {
         return (
@@ -40,7 +46,7 @@ export class Recipes extends Component {
                                 return (
 
                                     <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <a id="ctl00_Content_List_ctl01_Photo" className="photo" href="#" style={{ backgroundImage: `url(${this.site_url}${recipe.field_recipe_image})` }}>
+                                        <a onClick={ () => this.handleSubmit(recipe.nid)} id="ctl00_Content_List_ctl01_Photo" className="photo" style={{ backgroundImage: `url(${this.site_url}${recipe.field_recipe_image})` }}>
                                             <span>{recipe.title}</span>
                                         </a>
                                     </div>

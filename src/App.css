@@ -21,6 +21,7 @@ body {
 
   .menu-list {
     margin-left: 200px;
+    font-size:0.9em;
   }
 
   #hero {
@@ -187,6 +188,7 @@ body {
 
 .navbar-dark .navbar-nav .nav-link {
     color: #0f0f0f;
+    
   }
 
 .navbar-dark .navbar-nav .active > .nav-link {
@@ -475,3 +477,110 @@ div.home-recipe-list > div > a:hover span {
   top: 20%;
 }
 
+.wide-image {
+  width: 100%;
+  height: 400px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+}
+
+.wide-image p {
+  display: table-cell;
+  background: rgba(0,0,0,.4);
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.wide-image p small {
+  display: block;
+  max-width: 500px;
+  margin: 10px auto;
+  font-size: .6em;
+  color: rgba(255, 255, 255, .9);
+}
+
+.recipe-detail .instructions li {
+  counter-increment: step-counter;
+  border-top: dotted 1px #ccc;
+  padding: 20px 0;
+      padding-left: 0px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.recipe-detail .instructions li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #fedd38;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 30px;
+  text-align: center;
+}
+
+.recipe-detail .instructions ol {
+  list-style: none;
+}
+
+.recipe-detail .ingredients {
+  border: solid 1px #ddd;
+  border-radius: 3px;
+}
+
+.recipe-detail .ingredients {
+  border: solid 1px #ddd;
+  border-radius: 3px;
+}
+
+.recipe-detail .ingredients ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipe-detail .ingredients li {
+  border-top: solid 1px #eee;
+  padding: 20px;
+  font-size: .8em;
+  color: #999;
+}
+
+.recipe-detail .ingredients h3 {
+  font-size: .8em;
+  letter-spacing: 5px;
+  padding: 20px;
+  color: #999;
+  background: #ddd;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.recipe-detail {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.recipe-detail > .row > div h3 {
+  color: #3e3e3f;
+}
+
+#page-title .faq-column {
+  background: #fedd38;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  }
