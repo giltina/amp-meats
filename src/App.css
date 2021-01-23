@@ -1,6 +1,13 @@
 body {
   padding-top: 5rem;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #000;
 }
+
+p {
+  font-size: 0.9em;
+}
+
 .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
@@ -19,9 +26,21 @@ body {
     border-bottom: 4px solid black;
   }
 
+  .btn-dark {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.btn-dark:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
   .menu-list {
-    margin-left: 200px;
-    font-size:0.9em;
+    margin-left: 250px;
+    font-size:0.8em;
   }
 
   #hero {
@@ -67,7 +86,7 @@ body {
   .footer1 a {
     padding: 10px;
     color: white;
-    font-size: 0.8em;
+    font-size: 0.68em;
   }
 
   #footer-links {
@@ -184,14 +203,15 @@ body {
   
 .fa-stack {
     margin-top: -12px;
+    height: 1.6em;
   }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #0f0f0f;
+.navbar-light .navbar-nav .nav-link {
+    color: black;
     
   }
 
-.navbar-dark .navbar-nav .active > .nav-link {
+.navbar-light .navbar-nav .active > .nav-link {
 color: black;
   }
 
@@ -311,18 +331,18 @@ color: #000;
   margin: 30px 0 30px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover {
   color: #aaa !important;
   border-bottom: 3px solid #aaa;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .nav-link:focus {
   color: black !important;
   font-weight: bold;
   border-bottom: 3px solid #fedd38;
 }
 
-.navbar-dark .navbar-nav .nav-link:active {
+.navbar-light .navbar-nav .nav-link:active {
   color: #aaa !important;
 }
 
@@ -583,4 +603,64 @@ div.home-recipe-list > div > a:hover span {
   background-size: contain;
   padding-top: 120px;
   padding-bottom: 40px;
+  }
+
+  .btn-outline-dark {
+    color: #000;
+    border-color: #000;
+    font-weight: 700;
+    font-size: 0.8em;
+    padding-right: 60px;
+    padding-left: 60px;
+    border-width: 3px;
+}
+
+  @media only screen and (max-width: 768px) {
+    .navbar-light .navbar-nav .nav-link {
+      margin: auto;
+      width: 100px;
+      text-align: center;
+  }
+
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    top: 1%;
+}
+  
+  .top-nav {
+      height: 100px;
+  }
+  
+  .logo {
+      
+      width: 75px;
+      margin-top: -50px;
+  }
+  
+  .navbar-collapse {
+      
+      background: #fff;
+      margin-top: 48px;
+      z-index: 100;
+  }
+
+  .menu-list {
+    margin: auto;
+  }
+
+  .fa-stack {
+    display: none;
+}
+
+.order-button {
+width: 100%;
+}
+
+.navbar-light .navbar-toggler {
+  margin-top: 40px;
+}
+
   }

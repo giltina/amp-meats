@@ -16,6 +16,10 @@ export class Home extends Component {
     }
   }
 
+  recipeSubmit = (id) => {
+    this.props.history.push(`/recipe/${id}`)
+}
+
   componentDidMount() {
 
     axios.all([
@@ -51,17 +55,17 @@ export class Home extends Component {
         </section>
         <div className="container-fluid">
           <div className="row">
-            <div className="col odd">
+            <div className="col-md-4 odd">
               <img src="images/quality.png" width="25%" />
               <h6 style={{ marginTop: '10px', fontWeight: 'bold', fontSize: '0.8em' }}>TRUSTED QUALITY</h6>
               <p>100% premium quality Zimbabwean beef</p>
             </div>
-            <div className="col even">
+            <div className="col-md-4 even">
               <img src="images/convinience.png" width="25%" />
               <h6 style={{ marginTop: '10px', fontWeight: 'bold', fontSize: '0.8em' }}>CONVENIENCE</h6>
               <p>FREE delivery in Harare</p>
             </div>
-            <div className="col odd">
+            <div className="col-md-4 odd">
               <img src="images/choice.png" width="25%" />
               <h6 style={{ marginTop: '10px', fontWeight: 'bold', fontSize: '0.8em' }}>CHOICE</h6>
               <p>More than ten well thought out boxes to choose from</p>
@@ -72,12 +76,12 @@ export class Home extends Component {
         <section id="promo1">
           <div className="container">
             <div className="row">
-              <div className="col-4 my-auto" style={{ textAlign: 'center' }}>
-                <h5 style={{ fontWeight: 'bold' }}>OUR MEAT</h5>
+              <div className="col-md-4  my-auto" style={{ textAlign: 'center' }}>
+                <h3 style={{ fontWeight: '700' }}>OUR MEAT</h3>
                 <p>Better quality, better price, better service</p>
-                <button type="button" className="btn btn-outline-dark">More</button>
+                <button type="button" className="btn btn-outline-dark">MORE</button>
               </div>
-              <div className="col-8"><img src="images/meat.jpg" width="100%" /></div>
+              <div className="col-md-8"><img src="images/meat.jpg" width="100%" /></div>
             </div>
           </div>
         </section>
@@ -87,10 +91,10 @@ export class Home extends Component {
             <div className="row">
               {this.state.companies.map((company) => {
                 return (
-                  <div className="col-3">
+                  <div className="col-md-3">
                     <img className="img-responsive center-block" src={`${this.site_url}${company.field_company_logo}`} width="100%/" />
                     <img className="img-responsive center-block" src="images/paragraph_icon@2x.png" style={{ marginTop: '20px' }} width="5%" />
-                    <p>{company.field_home_intro}</p>
+                    <p>{company.field_home_page_intro}</p>
                   </div>
                 )
               })}
@@ -110,7 +114,7 @@ export class Home extends Component {
                 return (
 
                   <div className="col-lg-2 col-md-2 col-sm-4 col-xs-6">
-                    <a id="ctl00_Content_List_ctl01_Photo" className="photo" href="#" style={{ backgroundImage: `url(${this.site_url}${recipe.field_recipe_image})` }}>
+                    <a onClick={ () => this.recipeSubmit(recipe.nid)} id="ctl00_Content_List_ctl01_Photo" className="photo" style={{ backgroundImage: `url(${this.site_url}${recipe.field_recipe_image})` }}>
                       <span>{recipe.title}</span>
                     </a>
                   </div>

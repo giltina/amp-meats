@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link  } from 'react-router-dom'
+import TermsConditions from '../components/TermsConditions'
 
-function Footer() {
+export class Footer extends Component {
+
+  render() {
     return (
         <div>
 
@@ -20,10 +24,10 @@ function Footer() {
                   <a href="/python/">ORDER NOW</a>
                 </nav>
                 <nav className="footer1">
-                  <a href="#">TERMS &amp; CONDITIONS</a> 
-                  <a href="/css/">PRIVACY POLICY</a> 
-                  <a href="/js/">DELIVERY POLICY</a> 
-                  <a href="/python/">RETURN REFUND POLICY</a>
+                <a href="/terms">TERMS & CONDITIONS</a>
+                  <a href="/privacy">PRIVACY POLICY</a> 
+                  <a href="/delivery">DELIVERY POLICY</a> 
+                  <a href="/returns">RETURN REFUND POLICY</a>
                 </nav>
               </div>
             </div>
@@ -34,9 +38,11 @@ function Footer() {
             <p>Copyright © 2020 AMP Meats. All rights Reserved.</p>
           </div>
         </section>
-            
+      
         </div>
-    )
+      
+      )
+    }
 }
 
 export default Footer

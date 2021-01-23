@@ -8,12 +8,17 @@ import Contact from '../components/Contact'
 import Faqs from '../components/Faqs'
 import RecipeDetail from '../components/RecipeDetail'
 import CompanyDetail from '../components/CompanyDetail'
+import TermsConditions from '../components/TermsConditions'
+import PrivacyPolicy from '../components/PrivacyPolicy'
+import RefundPolicy from '../components/RefundPolicy'
+import DeliveryPolicy from '../components/DeliveryPolicy'
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 function Nav() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-md navbar-dark bg-white top-nav">
+      <nav className="navbar navbar-expand-md navbar-light bg-white top-nav">
         <div className="container">
           <Link to={process.env.PUBLIC_URL + '/'} className="navbar-brand">
             <img src={logo} className="logo" width={140} />
@@ -34,7 +39,7 @@ function Nav() {
             </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">BUTCHER BOX</a>
+                <a className="nav-link" href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4">BUTCHER BOX</a>
               </li>
               <li className="nav-item">
                 <Link to={process.env.PUBLIC_URL + '/recipes'} className="nav-link">
@@ -66,7 +71,7 @@ function Nav() {
                 MY ACCOUNT</a>
               </li>
             </ul>
-            <button className="btn btn-dark navbar-btn" style={{ marginTop: '-10px' }}>ORDER ONLINE</button>
+            <a className="btn btn-dark navbar-btn order-button" style={{ fontSize: '0.8em' }} href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4" >ORDER ONLINE</a>
           </div>
         </div></nav>
       <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
@@ -74,9 +79,14 @@ function Nav() {
       <Route path={process.env.PUBLIC_URL + '/meat'} component={Meat} />
       <Route path={process.env.PUBLIC_URL + '/recipes'} component={Recipes} />
       <Route path={process.env.PUBLIC_URL + '/recipe/:id'} component={RecipeDetail} />
-      <Route path={process.env.PUBLIC_URL + '/detail'} component={CompanyDetail} />
+      <Route path={process.env.PUBLIC_URL + '/company/:id'} component={CompanyDetail} />
       <Route path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
       <Route path={process.env.PUBLIC_URL + '/faqs'} component={Faqs} />
+      <Route path={process.env.PUBLIC_URL + '/terms'} component={TermsConditions} />
+      <Route path={process.env.PUBLIC_URL + '/privacy'} component={PrivacyPolicy} />
+      <Route path={process.env.PUBLIC_URL + '/delivery'} component={DeliveryPolicy} />
+      <Route path={process.env.PUBLIC_URL + '/returns'} component={RefundPolicy} />
+      
     </Router>
   )
 }
