@@ -168,12 +168,12 @@ export class About extends Component {
                   <div className="colcom-ceo">
                     <div className="container">
                       <div className="row">
-                        <div className="ol-md-8 col-xs-12 text-md-left col-xs-push-12 text-center people-column">
+                        <div className="col-md-8 col-xs-12 order-xs-2 text-md-left text-center people-column">
                         <h1>{person.title}</h1>
                           <h3>{person.field_position}</h3>
                           {ReactHtmlParser(person.field_description)}
                         </div>
-                        <div className="col-md-4 col-xs-12 col-xs-pull-12 text-center">
+                        <div className="col-md-4 col-xs-12 order-xs-1 text-center">
                           <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
                         </div>
                       </div>
@@ -194,7 +194,7 @@ export class About extends Component {
                         <div className="col-md-4 col-xs-12 text-center">
                           <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
                         </div>
-                        <div className="ol-md-8 col-xs-12 text-md-left text-center people-column">
+                        <div className="col-md-8 col-xs-12 text-md-left text-center people-column">
                         <h1>{person.title}</h1>
                           <h3>{person.field_position}</h3>
                           {ReactHtmlParser(person.field_description)}
@@ -212,17 +212,7 @@ export class About extends Component {
 
           })}
         </section>
-        <section id="call">
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <p>Order online or call<br /><span style={{ fontSize: '2.3em', fontWeight: 'bold' }}>(04) 772 685</span><br />to place an order.</p>
-                <button type="button" className="btn btn-outline-light"><i className="fa fa-phone" aria-hidden="true" />
-                  CALL NOW</button>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </div>
     )
   }

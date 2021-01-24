@@ -369,6 +369,7 @@ div.recipe-list > div > a.photo {
   height: 100%;
   width: 100%;
   position: absolute;
+  cursor: pointer;
 }
 
 div.recipe-list > div {
@@ -433,6 +434,7 @@ div.home-recipe-list > div > a.photo {
   height: 100%;
   width: 100%;
   position: absolute;
+  cursor: pointer;
 }
 
 div.home-recipe-list > div {
@@ -664,3 +666,17 @@ width: 100%;
 }
 
   }
+
+  .contact-details p.tbl > span:first-child {
+    width: 30px;
+    padding-top: 3px;
+}
+
+  .contact-details p.tbl > * {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.contact-details p.tbl a {
+  color: black;
+}

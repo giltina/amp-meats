@@ -57,7 +57,7 @@ export class Meat extends Component {
             <div className="row">
               <div className="col-7">
               {ReactHtmlParser(meat.field_main_content)}
-                <button type="button" className="btn btn-outline-dark">ORDER NOW</button>
+                <a className="btn btn-outline-dark" a href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4">ORDER NOW</a>
               </div>
               <div className="col-5">
                 <div className="drop-quote">
@@ -67,17 +67,7 @@ export class Meat extends Component {
             </div>
           </div>
         </section>
-        <section id="call">
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <p>Order online or call<br /><span style={{ fontSize: '2.3em', fontWeight: 'bold' }}>(04) 772 685</span><br />to place an order.</p>
-                <button type="button" className="btn btn-outline-light"><i className="fa fa-phone" aria-hidden="true" />
-                  CALL NOW</button>
-              </div>
-            </div>
-          </div>
-        </section>
+       
         </div>
             )
           })}
