@@ -168,13 +168,15 @@ export class About extends Component {
                   <div className="colcom-ceo">
                     <div className="container">
                       <div className="row">
-                        <div className="col-md-8 col-xs-12 order-xs-2 text-md-left text-center people-column">
+                        
+                        <div className="col-md-4 order-md-12 text-center">
+                          <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
+                        </div>
+
+                        <div className="col-md-8 order-md-1 text-md-left text-center people-column">
                         <h1>{person.title}</h1>
                           <h3>{person.field_position}</h3>
                           {ReactHtmlParser(person.field_description)}
-                        </div>
-                        <div className="col-md-4 col-xs-12 order-xs-1 text-center">
-                          <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
                         </div>
                       </div>
                     </div>

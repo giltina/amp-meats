@@ -38,14 +38,14 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <section>
+        <section class="home-slideshow">
           <Carousel>
             {this.state.sliders.map((slider) => {
               return (
                 <Carousel.Item>
                   <img className="d-block w-100" src={`${this.site_url}${slider.field_slider_image}`} alt="First slide" />
                   <Carousel.Caption>
-                    <div><div><p><img alt="" src={`${this.site_url}${slider.field_slider_logo}`} style={{ width: '200px', height: '197px' }} /></p><p>{slider.field_slider_description}</p><p><a className="btn btn-outline-light" href="/store">Order Now</a></p></div></div>
+                    <div><div><p><img alt="" src={`${this.site_url}${slider.field_slider_logo}`} style={{ width: '60%' }} /></p><p>{slider.field_slider_description}</p><p><a className="btn btn-outline-light" href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4">Order Now</a></p></div></div>
                   </Carousel.Caption>
                 </Carousel.Item>
               )
@@ -76,12 +76,12 @@ export class Home extends Component {
         <section id="promo1">
           <div className="container">
             <div className="row">
-              <div className="col-md-4  my-auto" style={{ textAlign: 'center' }}>
+              <div className="col-md-8 order-md-12 "><img src="images/meat.jpg" width="100%" /></div>
+              <div className="col-md-4 order-md-1  my-auto" style={{ textAlign: 'center' }}>
                 <h3 style={{ fontWeight: '700' }}>OUR MEAT</h3>
                 <p>Better quality, better price, better service</p>
                 <button type="button" className="btn btn-outline-dark">MORE</button>
               </div>
-              <div className="col-md-8"><img src="images/meat.jpg" width="100%" /></div>
             </div>
           </div>
         </section>

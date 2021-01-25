@@ -624,9 +624,15 @@ div.home-recipe-list > div > a:hover span {
       text-align: center;
   }
 
-  .carousel-item {
-    height: 50vh;
+  .home-slideshow {
+    margin-bottom: -300px;
   }
+
+  .carousel-caption > div > div {
+    max-width: 200px;
+    padding: 10px;
+          
+    }
 
   .carousel-caption {
     top: 1%;
@@ -679,4 +685,12 @@ width: 100%;
 
 .contact-details p.tbl a {
   color: black;
+}
+
+.carousel-item {
+  height: 81vh;
+}
+
+.content {
+ padding: 0 20px;
 }
