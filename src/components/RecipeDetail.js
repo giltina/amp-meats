@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
+import { BASE_URL } from "../app.config";
 
 export class RecipeDetail extends Component {
 
-    site_url = "http://ampmeats.zimbabwewebdesign.com"
 
     constructor(props) {
         super(props)
@@ -19,7 +19,7 @@ export class RecipeDetail extends Component {
 
     componentDidMount() {
 
-        axios.get(`http://ampmeats.zimbabwewebdesign.com/rest/v1/recipe/${this.state.id}`)
+        axios.get(`${BASE_URL}/rest/v1/recipe/${this.state.id}`)
             .then(response => {
                 this.setState({ recipes: response.data })
             })
@@ -33,7 +33,7 @@ export class RecipeDetail extends Component {
                 {this.state.recipes.map((recipe) => {
                     return (
                         <div>
-                            <div id="ctl00_Content_HeroImage" className="wide-image" style={{ backgroundImage: `url(${this.site_url}${recipe.field_main_image})` }}>
+                            <div id="ctl00_Content_HeroImage" className="wide-image" style={{ backgroundImage: `url(${BASE_URL}${recipe.field_main_image})` }}>
                                 <p>{recipe.title}
                                     <small>{recipe.field_sub_heading}</small></p>
                             </div>

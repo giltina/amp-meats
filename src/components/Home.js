@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Carousel from 'react-bootstrap/Carousel'
+import { BASE_URL } from "../app.config";
 
 export class Home extends Component {
 
-  site_url = "http://ampmeats.zimbabwewebdesign.com"
+  
 
   constructor(props) {
     super(props)
@@ -23,9 +24,9 @@ export class Home extends Component {
   componentDidMount() {
 
     axios.all([
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/sliders'),
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/companies'),
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/recipes'),
+      axios.get(`${BASE_URL}/rest/v1/sliders`),
+      axios.get(`${BASE_URL}/rest/v1/companies`),
+      axios.get(`${BASE_URL}/rest/v1/recipes`),
     ])
       .then(response => {
         this.setState({ sliders: response[0].data })
@@ -33,6 +34,16 @@ export class Home extends Component {
         this.setState({ recipes: response[2].data })
       })
       .catch(error => console.log(error))
+  }
+
+  openPopup()
+  {
+    var popup = window.open("https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, top=30");
+    if (popup.outerWidth < window.screen.availWidth || popup.outerHeight < window.screen.availHeight)
+    {
+      popup.moveTo((window.screen.availWidth)*0.10,(window.screen.availHeight)*0.95);
+      popup.resizeTo((window.screen.availWidth)*0.85, (window.screen.availHeight)*0.85);
+    }
   }
 
   render() {
@@ -43,9 +54,9 @@ export class Home extends Component {
             {this.state.sliders.map((slider) => {
               return (
                 <Carousel.Item>
-                  <img className="d-block w-100" src={`${this.site_url}${slider.field_slider_image}`} alt="First slide" />
+                  <img className="d-block w-100" src={`${BASE_URL}${slider.field_slider_image}`} alt="First slide" />
                   <Carousel.Caption>
-                    <div><div><p><img alt="" src={`${this.site_url}${slider.field_slider_logo}`} style={{ width: '60%' }} /></p><p>{slider.field_slider_description}</p><p><a className="btn btn-outline-light" href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4">Order Now</a></p></div></div>
+                    <div><div><p><img alt="" src={`${BASE_URL}${slider.field_slider_logo}`} style={{ width: '60%' }} /></p><p>{slider.field_slider_description}</p><p><a className="btn btn-outline-light" onClick={ () => this.openPopup()}>Order Now</a></p></div></div>
                   </Carousel.Caption>
                 </Carousel.Item>
               )
@@ -92,7 +103,7 @@ export class Home extends Component {
               {this.state.companies.map((company) => {
                 return (
                   <div className="col-md-3">
-                    <img className="img-responsive center-block" src={`${this.site_url}${company.field_company_logo}`} width="100%/" />
+                    <img className="img-responsive center-block" src={`${BASE_URL}${company.field_company_logo}`} width="100%/" />
                     <img className="img-responsive center-block" src="images/paragraph_icon@2x.png" style={{ marginTop: '20px' }} width="5%" />
                     <p>{company.field_home_page_intro}</p>
                   </div>
@@ -114,7 +125,7 @@ export class Home extends Component {
                 return (
 
                   <div className="col-lg-2 col-md-2 col-sm-4 col-xs-6">
-                    <a onClick={ () => this.recipeSubmit(recipe.nid)} id="ctl00_Content_List_ctl01_Photo" className="photo" style={{ backgroundImage: `url(${this.site_url}${recipe.field_recipe_image})` }}>
+                    <a onClick={ () => this.recipeSubmit(recipe.nid)} id="ctl00_Content_List_ctl01_Photo" className="photo" style={{ backgroundImage: `url(${BASE_URL}${recipe.field_recipe_image})` }}>
                       <span>{recipe.title}</span>
                     </a>
                   </div>

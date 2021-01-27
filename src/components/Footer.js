@@ -29,8 +29,6 @@ export class Footer extends Component {
                   <a href="/recipes">RECIPES</a>
                   <a href="/cntact">CONTACT US</a> 
                   <a href="/faqs">FAQs</a> 
-                  <a href="#">CART</a> 
-                  <a href="#">MY ACCOUNT</a>
                   <a href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4">ORDER NOW</a>
                 </nav>
                 <nav className="footer1">

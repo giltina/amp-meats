@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
+import { BASE_URL } from "../app.config";
 
 export class Meat extends Component {
-  site_url = "http://ampmeats.zimbabwewebdesign.com"
 
   constructor(props) {
     super(props)
@@ -16,7 +16,7 @@ export class Meat extends Component {
 
   componentDidMount() {
 
-    axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/meat')
+    axios.get(`${BASE_URL}/rest/v1/meat`)
         .then(response => {
             this.setState({ meats: response.data })
         })

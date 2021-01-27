@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import logo from '../logo.png'
 import Home from '../components/Home'
 import About from '../components/About'
@@ -15,8 +15,20 @@ import DeliveryPolicy from '../components/DeliveryPolicy'
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
-function Nav() {
-  return (
+export class Nav extends Component {
+
+  openPopup()
+{
+	var popup = window.open("https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, top=30");
+  if (popup.outerWidth < window.screen.availWidth || popup.outerHeight < window.screen.availHeight)
+  {
+  	popup.moveTo((window.screen.availWidth)*0.10,(window.screen.availHeight)*0.95);
+  	popup.resizeTo((window.screen.availWidth)*0.85, (window.screen.availHeight)*0.85);
+  }
+}
+
+  render() {
+    return (
     <Router>
       <nav className="navbar navbar-expand-md navbar-light bg-white top-nav">
         <div className="container">
@@ -39,7 +51,7 @@ function Nav() {
             </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4">BUTCHER BOX</a>
+                <a className="nav-link" href={void(0)} onClick={ () => this.openPopup()} style={{ cursor: 'pointer' }}>BUTCHER BOX</a>
               </li>
               <li className="nav-item">
                 <Link to={process.env.PUBLIC_URL + '/recipes'} className="nav-link">
@@ -56,22 +68,9 @@ function Nav() {
                   FAQS
             </Link>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#"><span className="fa-stack fa-lg">
-                  <i className="fa fa-circle fa-stack-2x icon-background" />
-                  <i className="fa fa-cart-arrow-down fa-stack-1x" />
-                </span>
-                CART</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#"><span className="fa-stack fa-lg">
-                  <i className="fa fa-circle fa-stack-2x icon-background" />
-                  <i className="fa fa-user fa-stack-1x" />
-                </span>
-                MY ACCOUNT</a>
-              </li>
+              
             </ul>
-            <a className="btn btn-dark navbar-btn order-button" style={{ fontSize: '0.8em' }} href="https://dev.odos.tech/shop/d961edde-6566-4352-b507-dcb9505f1dc4" >ORDER ONLINE</a>
+            <a className="btn btn-dark navbar-btn order-button" onClick={ () => this.openPopup()} style={{ fontSize: '0.8em', color: 'white' }}>ORDER ONLINE</a>
           </div>
         </div></nav>
       <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
@@ -88,7 +87,8 @@ function Nav() {
       <Route path={process.env.PUBLIC_URL + '/returns'} component={RefundPolicy} />
       
     </Router>
-  )
+    )
+  }
 }
 
 export default Nav

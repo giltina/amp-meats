@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom'
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
+import { BASE_URL } from "../app.config";
 
 export class About extends Component {
 
-  site_url = "http://ampmeats.zimbabwewebdesign.com"
 
   constructor(props) {
     super(props)
@@ -19,8 +19,8 @@ export class About extends Component {
   componentDidMount() {
 
     axios.all([
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/companies'),
-      axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/people'),
+      axios.get(`${BASE_URL}/rest/v1/companies`),
+      axios.get(`${BASE_URL}/rest/v1/people`),
     ])
       .then(response => {
         this.setState({ companies: response[0].data })
@@ -59,7 +59,7 @@ export class About extends Component {
 
 
                     <div className="col-lg-6 col-sm-6 col-md-6 col-xs-12 first">
-                      <img className="img-responsive center-block co-logo" src={`${this.site_url}${company.field_company_logo}`} style={{ width: '60%' }} />
+                      <img className="img-responsive center-block co-logo" src={`${BASE_URL}${company.field_company_logo}`} style={{ width: '60%' }} />
                       <br />
                       <img className="img-responsive center-block" src="images/paragraph_icon@2x.png" style={{ width: '20px', marginTop: '15px', marginBottom: '15px' }} />
                       <p>{company.field_about_us_page_intro}</p>
@@ -76,7 +76,7 @@ export class About extends Component {
 
 
                     <div className="col-lg-6 col-sm-6 col-md-6 col-xs-12 last">
-                      <img className="img-responsive center-block co-logo" src={`${this.site_url}${company.field_company_logo}`} style={{ width: '60%' }} />
+                      <img className="img-responsive center-block co-logo" src={`${BASE_URL}${company.field_company_logo}`} style={{ width: '60%' }} />
                       <br />
                       <img className="img-responsive center-block" src="images/paragraph_icon@2x.png" style={{ width: '20px', marginTop: '15px', marginBottom: '15px' }} />
                       <p>{company.field_about_us_page_intro}</p>
@@ -93,7 +93,7 @@ export class About extends Component {
 
 
                     <div className="col-lg-6 col-sm-6 col-md-6 col-xs-12 last">
-                      <img className="img-responsive center-block co-logo" src={`${this.site_url}${company.field_company_logo}`} style={{ width: '60%' }} />
+                      <img className="img-responsive center-block co-logo" src={`${BASE_URL}${company.field_company_logo}`} style={{ width: '60%' }} />
                       <br />
                       <img className="img-responsive center-block" src="images/paragraph_icon@2x.png" style={{ width: '20px', marginTop: '15px', marginBottom: '15px' }} />
                       <p>{company.field_about_us_page_intro}</p>
@@ -111,7 +111,7 @@ export class About extends Component {
 
 
                     <div className="col-lg-6 col-sm-6 col-md-6 col-xs-12 first">
-                      <img className="img-responsive center-block co-logo" src={`${this.site_url}${company.field_company_logo}`} style={{ width: '60%' }} />
+                      <img className="img-responsive center-block co-logo" src={`${BASE_URL}${company.field_company_logo}`} style={{ width: '60%' }} />
                       <br />
                       <img className="img-responsive center-block" src="images/paragraph_icon@2x.png" style={{ width: '20px', marginTop: '15px', marginBottom: '15px' }} />
                       <p>{company.field_about_us_page_intro}</p>
@@ -147,7 +147,7 @@ export class About extends Component {
                     <div className="container">
                       <div className="row">
                         <div className="col-md-4 col-xs-12 text-center">
-                          <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
+                          <img src={`${BASE_URL}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
                         </div>
                         <div className="col-md-8 col-xs-12 text-md-left text-center people-column">
                           <h1>{person.title}</h1>
@@ -170,7 +170,7 @@ export class About extends Component {
                       <div className="row">
                         
                         <div className="col-md-4 order-md-12 text-center">
-                          <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
+                          <img src={`${BASE_URL}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
                         </div>
 
                         <div className="col-md-8 order-md-1 text-md-left text-center people-column">
@@ -194,7 +194,7 @@ export class About extends Component {
                     <div className="container">
                       <div className="row">
                         <div className="col-md-4 col-xs-12 text-center">
-                          <img src={`${this.site_url}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
+                          <img src={`${BASE_URL}${person.field_image_person}`} className="img-fluid" style={{ marginTop: '20px', width: '70%' }} />
                         </div>
                         <div className="col-md-8 col-xs-12 text-md-left text-center people-column">
                         <h1>{person.title}</h1>

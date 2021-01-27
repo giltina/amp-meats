@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BASE_URL } from "../app.config";
 
 export class Contact extends Component {
     render() {

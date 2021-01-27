@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
+import { BASE_URL } from "../app.config";
 
 export class CompanyDetail extends Component {
 
-    site_url = "http://ampmeats.zimbabwewebdesign.com"
 
     constructor(props) {
         super(props)
@@ -18,7 +18,7 @@ export class CompanyDetail extends Component {
     componentDidMount() {
 
         axios.all([
-          axios.get(`http://ampmeats.zimbabwewebdesign.com/rest/v1/company/${this.state.id}`),
+          axios.get(`${BASE_URL}/rest/v1/company/${this.state.id}`),
                   ])
           .then(response => {
             this.setState({ companies: response[0].data })
@@ -52,7 +52,7 @@ export class CompanyDetail extends Component {
                             </div>
                             <div className="col-3">
                                 <div className="float-logo">
-                                    <img src={`${this.site_url}${company.field_company_logo}`} width="100%/" />
+                                    <img src={`${BASE_URL}${company.field_company_logo}`} width="100%/" />
                                 </div>
                             </div>
                         </div>

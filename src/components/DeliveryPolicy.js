@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
+import { BASE_URL } from "../app.config";
 
 export class DeliveryPolicy extends Component {
-  site_url = "http://ampmeats.zimbabwewebdesign.com"
 
   constructor(props) {
       super(props)
@@ -16,7 +16,7 @@ export class DeliveryPolicy extends Component {
   componentDidMount() {
 
       axios.all([
-        axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/page/28')
+        axios.get(`${BASE_URL}/rest/v1/page/28`)
       
       ])
         .then(response => {

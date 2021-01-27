@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom'
+import { BASE_URL } from "../app.config";
 
 export class Recipes extends Component {
-    site_url = "http://ampmeats.zimbabwewebdesign.com"
 
     constructor(props) {
         super(props)
@@ -16,7 +16,7 @@ export class Recipes extends Component {
     componentDidMount() {
 
         axios.all([
-            axios.get('http://ampmeats.zimbabwewebdesign.com/rest/v1/recipes'),
+            axios.get(`${BASE_URL}/rest/v1/recipes`),
         ])
             .then(response => {
                 this.setState({ recipes: response[0].data })
@@ -46,7 +46,7 @@ export class Recipes extends Component {
                                 return (
 
                                     <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <a onClick={ () => this.handleSubmit(recipe.nid)} id="ctl00_Content_List_ctl01_Photo" className="photo" style={{ backgroundImage: `url(${this.site_url}${recipe.field_recipe_image})` }}>
+                                        <a onClick={ () => this.handleSubmit(recipe.nid)} id="ctl00_Content_List_ctl01_Photo" className="photo" style={{ backgroundImage: `url(${BASE_URL}${recipe.field_recipe_image})` }}>
                                             <span>{recipe.title}</span>
                                         </a>
                                     </div>
